@@ -1,0 +1,28 @@
+PODS:
+  - Material (3.1.8):
+    - Material/Core (= 3.1.8)
+  - Material/Core (3.1.8):
+    - Motion (~> 3.1.1)
+  - Motion (3.1.3):
+    - Motion/Core (= 3.1.3)
+  - Motion/Core (3.1.3)
+  - SideMenu (6.5.0)
+
+DEPENDENCIES:
+  - Material
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - Material
+    - Motion
+    - SideMenu
+
+SPEC CHECKSUMS:
+  Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+
+PODFILE CHECKSUM: 5861442de7a2a2d72dfa9772dec350cb522977ba
+
+COCOAPODS: 1.10.1
