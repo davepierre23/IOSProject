@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		AD7D950326068EA6002A2A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950126068EA6002A2A72 /* Main.storyboard */; };
 		AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950426068EA8002A2A72 /* Assets.xcassets */; };
 		AD7D950826068EA8002A2A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950626068EA8002A2A72 /* LaunchScreen.storyboard */; };
+		ADFBCDB42606BCAF008866C1 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDB32606BCAF008866C1 /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AD7D950426068EA8002A2A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7D950726068EA8002A2A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7D950926068EA8002A2A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADFBCDB32606BCAF008866C1 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 				890A5975FF05106922066DE1 /* Pods-FinanceApp.debug.xcconfig */,
 				08ACE90CFA4443551BFD5CB6 /* Pods-FinanceApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				AD7D94FB26068EA6002A2A72 /* AppDelegate.swift */,
 				AD7D94FD26068EA6002A2A72 /* SceneDelegate.swift */,
 				AD7D94FF26068EA6002A2A72 /* ViewController.swift */,
+				ADFBCDB32606BCAF008866C1 /* SideMenu.swift */,
 				AD7D950126068EA6002A2A72 /* Main.storyboard */,
 				AD7D950426068EA8002A2A72 /* Assets.xcassets */,
 				AD7D950626068EA8002A2A72 /* LaunchScreen.storyboard */,
@@ -209,6 +211,7 @@
 				AD7D950026068EA6002A2A72 /* ViewController.swift in Sources */,
 				AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,
+				ADFBCDB42606BCAF008866C1 /* SideMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
