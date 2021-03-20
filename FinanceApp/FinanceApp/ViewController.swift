@@ -8,14 +8,21 @@
 import UIKit
 import SideMenu
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MenuControllerDelagate {
 
-    private let sideMenu = SideMenuNavigationController(rootViewController: MenuController(with: ["Home","Info","Setting"]));
+    public var sideMenu : SideMenuNavigationController?;
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let menu = MenuController(with: ["Home","Info","Setting"]);
         
-        sideMenu.leftSide = true
+        menu.delagate = self
+        
+        sideMenu =  SideMenuNavigationController(rootViewController: menu);
+        
+        sideMenu?.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
 
@@ -32,14 +39,38 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapButton(){
-        present(sideMenu, animated: true)
+        present(sideMenu!, animated: true)
+    }
+    
+    func didSelectMenuItem(named:String){
+        sideMenu?.dismiss(animated:true, completion: {[weak self] in
+            if named == "Home"{
+                self?.view.backgroundColor = .green
+            }
+            if named == "Info"{
+                self?.view.backgroundColor = .red
+                
+            }
+            if named == "Settings"{
+                self?.view.backgroundColor = .orange
+                
+            }
+            
+        } )
     }
     
     
 }
-class MenuController: UITableViewController{
-    private let menuItems: [String];
 
+protocol MenuControllerDelagate{
+    func didSelectMenuItem(named:String)
+}
+
+class MenuController: UITableViewController{
+    
+    public var delagate : MenuControllerDelagate? ;
+    private let menuItems: [String];
+    private let mainColor = UIColor(red: 3/255.0, green: 3/255.0, blue: 3/255.0, alpha: 1);
     init(with menuItems: [String]){
         self.menuItems = menuItems
         super.init(nibName:nil,bundle:nil)
@@ -57,15 +88,15 @@ class MenuController: UITableViewController{
     }
     
     override func viewDidLoad() {
-        tableView.backgroundColor = .darkGray
-        view.backgroundColor = .darkGray;
+        tableView.backgroundColor = mainColor;
+        view.backgroundColor = mainColor;
     }
     override func tableView(_ tableView:UITableView,cellForRowAt indexPath: IndexPath )-> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
         cell.textLabel?.text = menuItems[indexPath.row]
         cell.textLabel?.textColor = .white
-        cell.backgroundColor = .darkGray
-        cell.contentView.backgroundColor = .darkGray
+        cell.backgroundColor = mainColor
+        cell.contentView.backgroundColor = mainColor
         
         return cell;
     }
@@ -74,7 +105,8 @@ class MenuController: UITableViewController{
         tableView.deselectRow(at: indexPath, animated: true)
     
         //tell app to go to the next view
-    
+        let selectedItem = menuItems[indexPath.row]
+        delagate?.didSelectMenuItem(named: selectedItem)
     }
     
     
