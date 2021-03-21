@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DD8D4E9BDDE11F6C7D9D836 /* Pods_FinancePlannerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D605ED91C6A96132315CF /* Pods_FinancePlannerApp.framework */; };
 		AD8C90D62606A79400EE3346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C90D52606A79400EE3346 /* AppDelegate.swift */; };
 		AD8C90D82606A79400EE3346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C90D72606A79400EE3346 /* SceneDelegate.swift */; };
 		AD8C90DA2606A79400EE3346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C90D92606A79400EE3346 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0E729C42293EC14A48D53C /* Pods-FinancePlannerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancePlannerApp.release.xcconfig"; path = "Target Support Files/Pods-FinancePlannerApp/Pods-FinancePlannerApp.release.xcconfig"; sourceTree = "<group>"; };
+		509D605ED91C6A96132315CF /* Pods_FinancePlannerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancePlannerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8C90D22606A79400EE3346 /* FinancePlannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancePlannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8C90D52606A79400EE3346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8C90D72606A79400EE3346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		AD8C90DE2606A79D00EE3346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD8C90E12606A79D00EE3346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD8C90E32606A79D00EE3346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE00361F86757114C2E1A2A6 /* Pods-FinancePlannerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancePlannerApp.debug.xcconfig"; path = "Target Support Files/Pods-FinancePlannerApp/Pods-FinancePlannerApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD8D4E9BDDE11F6C7D9D836 /* Pods_FinancePlannerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35851C2F33A57E9678677C24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE00361F86757114C2E1A2A6 /* Pods-FinancePlannerApp.debug.xcconfig */,
+				1E0E729C42293EC14A48D53C /* Pods-FinancePlannerApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CC57AF1C048AF6AF5218537 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				509D605ED91C6A96132315CF /* Pods_FinancePlannerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD8C90C92606A79300EE3346 = {
 			isa = PBXGroup;
 			children = (
 				AD8C90D42606A79400EE3346 /* FinancePlannerApp */,
 				AD8C90D32606A79400EE3346 /* Products */,
+				35851C2F33A57E9678677C24 /* Pods */,
+				8CC57AF1C048AF6AF5218537 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD8C90E62606A79D00EE3346 /* Build configuration list for PBXNativeTarget "FinancePlannerApp" */;
 			buildPhases = (
+				1C698A84AF163CC0402597D5 /* [CP] Check Pods Manifest.lock */,
 				AD8C90CE2606A79400EE3346 /* Sources */,
 				AD8C90CF2606A79400EE3346 /* Frameworks */,
 				AD8C90D02606A79400EE3346 /* Resources */,
+				379EAFABB1B389C076D49F0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C698A84AF163CC0402597D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinancePlannerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379EAFABB1B389C076D49F0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinancePlannerApp/Pods-FinancePlannerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinancePlannerApp/Pods-FinancePlannerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinancePlannerApp/Pods-FinancePlannerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD8C90CE2606A79400EE3346 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		AD8C90E72606A79D00EE3346 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE00361F86757114C2E1A2A6 /* Pods-FinancePlannerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		AD8C90E82606A79D00EE3346 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E0E729C42293EC14A48D53C /* Pods-FinancePlannerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -10,15 +10,15 @@ import SideMenu
 
 
 protocol MenuControllerDelagate{
-    func didSelectMenuItem(named:String)
+    func didSelectMenuItem(named:SideMenuItem)
 }
 
 class MenuController: UITableViewController{
     
     public var delagate : MenuControllerDelagate? ;
-    private let menuItems: [String];
+    private let menuItems: [SideMenuItem];
     private let mainColor = UIColor(red: 3/255.0, green: 3/255.0, blue: 3/255.0, alpha: 1);
-    init(with menuItems: [String]){
+    init(with menuItems: [SideMenuItem]){
         self.menuItems = menuItems
         super.init(nibName:nil,bundle:nil)
       
@@ -40,7 +40,7 @@ class MenuController: UITableViewController{
     }
     override func tableView(_ tableView:UITableView,cellForRowAt indexPath: IndexPath )-> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
-        cell.textLabel?.text = menuItems[indexPath.row]
+        cell.textLabel?.text = menuItems[indexPath.row].rawValue
         cell.textLabel?.textColor = .white
         cell.backgroundColor = mainColor
         cell.contentView.backgroundColor = mainColor
