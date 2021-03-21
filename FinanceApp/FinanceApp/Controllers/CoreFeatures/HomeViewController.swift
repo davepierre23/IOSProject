@@ -56,6 +56,28 @@ class HomeViewController: UIViewController, MenuControllerDelagate {
         present(sideMenu!, animated: true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        createTimer()
+    }
+    
+    func createTimer(){
+        let timeInterval2 = 2
+        // create a timer that fires a methhod every second
+        let timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false);
+        
+        // give a tolernace of that relax the progame
+        timer.tolerance = 200
+        // fire the timer when ever its free
+        DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
+            timer.fire()
+        })
+    }
+    
+    @objc func fireTimer(){
+        view.backgroundColor = .systemRed;
+    }
+    
     func didSelectMenuItem(named:SideMenuItem){
         // when some clicks on a menu item close the menu and set the correspond menu
         sideMenu?.dismiss(animated:true, completion: nil)
@@ -84,6 +106,7 @@ class HomeViewController: UIViewController, MenuControllerDelagate {
 
     }
     
+
     
 }
 
