@@ -10,13 +10,16 @@
 		8BD6B16BF084E88AED46B397 /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */; };
 		AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FB26068EA6002A2A72 /* AppDelegate.swift */; };
 		AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FD26068EA6002A2A72 /* SceneDelegate.swift */; };
-		AD7D950026068EA6002A2A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FF26068EA6002A2A72 /* ViewController.swift */; };
+		AD7D950026068EA6002A2A72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FF26068EA6002A2A72 /* HomeViewController.swift */; };
 		AD7D950326068EA6002A2A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950126068EA6002A2A72 /* Main.storyboard */; };
 		AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950426068EA8002A2A72 /* Assets.xcassets */; };
 		AD7D950826068EA8002A2A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950626068EA8002A2A72 /* LaunchScreen.storyboard */; };
 		ADFBCDB42606BCAF008866C1 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDB32606BCAF008866C1 /* SideMenu.swift */; };
 		ADFBCDBC2606BFCB008866C1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDBB2606BFCB008866C1 /* InfoViewController.swift */; };
 		ADFBCDBE2606D6C6008866C1 /* SeachTickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDBD2606D6C6008866C1 /* SeachTickerViewController.swift */; };
+		ADFBCDC52606F131008866C1 /* InvestCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDC42606F131008866C1 /* InvestCalculatorViewController.swift */; };
+		ADFBCDC72606F159008866C1 /* DripCalcultorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDC62606F159008866C1 /* DripCalcultorViewController.swift */; };
+		ADFBCDCB2606F1F1008866C1 /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,7 @@
 		AD7D94F826068EA6002A2A72 /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7D94FB26068EA6002A2A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7D94FD26068EA6002A2A72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD7D94FF26068EA6002A2A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD7D94FF26068EA6002A2A72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AD7D950226068EA6002A2A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD7D950426068EA8002A2A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7D950726068EA8002A2A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		ADFBCDB32606BCAF008866C1 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		ADFBCDBB2606BFCB008866C1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		ADFBCDBD2606D6C6008866C1 /* SeachTickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachTickerViewController.swift; sourceTree = "<group>"; };
+		ADFBCDC42606F131008866C1 /* InvestCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestCalculatorViewController.swift; sourceTree = "<group>"; };
+		ADFBCDC62606F159008866C1 /* DripCalcultorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripCalcultorViewController.swift; sourceTree = "<group>"; };
+		ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +104,8 @@
 		ADFBCDBF2606E1E0008866C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ADFBCDBD2606D6C6008866C1 /* SeachTickerViewController.swift */,
-				ADFBCDBB2606BFCB008866C1 /* InfoViewController.swift */,
-				ADFBCDB32606BCAF008866C1 /* SideMenu.swift */,
-				AD7D94FF26068EA6002A2A72 /* ViewController.swift */,
+				ADFBCDC92606F1D8008866C1 /* Other */,
+				ADFBCDC82606F185008866C1 /* CoreFeatures */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +142,27 @@
 				AD7D950626068EA8002A2A72 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		ADFBCDC82606F185008866C1 /* CoreFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				ADFBCDBD2606D6C6008866C1 /* SeachTickerViewController.swift */,
+				ADFBCDBB2606BFCB008866C1 /* InfoViewController.swift */,
+				ADFBCDB32606BCAF008866C1 /* SideMenu.swift */,
+				AD7D94FF26068EA6002A2A72 /* HomeViewController.swift */,
+				ADFBCDC42606F131008866C1 /* InvestCalculatorViewController.swift */,
+				ADFBCDC62606F159008866C1 /* DripCalcultorViewController.swift */,
+			);
+			path = CoreFeatures;
+			sourceTree = "<group>";
+		};
+		ADFBCDC92606F1D8008866C1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7D950026068EA6002A2A72 /* ViewController.swift in Sources */,
+				AD7D950026068EA6002A2A72 /* HomeViewController.swift in Sources */,
+				ADFBCDC72606F159008866C1 /* DripCalcultorViewController.swift in Sources */,
 				AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,
+				ADFBCDCB2606F1F1008866C1 /* TickerViewController.swift in Sources */,
+				ADFBCDC52606F131008866C1 /* InvestCalculatorViewController.swift in Sources */,
 				ADFBCDB42606BCAF008866C1 /* SideMenu.swift in Sources */,
 				ADFBCDBC2606BFCB008866C1 /* InfoViewController.swift in Sources */,
 				ADFBCDBE2606D6C6008866C1 /* SeachTickerViewController.swift in Sources */,

@@ -14,7 +14,7 @@ enum SideMenuItem: String, CaseIterable{
     case SearchTicker = "Search Ticker"
     case setting = "Setting"
 }
-class ViewController: UIViewController, MenuControllerDelagate {
+class HomeViewController: UIViewController, MenuControllerDelagate {
 
     public var sideMenu : SideMenuNavigationController?;
     
