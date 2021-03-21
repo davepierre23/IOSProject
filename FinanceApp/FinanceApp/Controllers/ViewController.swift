@@ -11,6 +11,7 @@ import SideMenu
 enum SideMenuItem: String, CaseIterable{
     case home = "Home"
     case info = "Info"
+    case SearchTicker = "Search Ticker"
     case setting = "Setting"
 }
 class ViewController: UIViewController, MenuControllerDelagate {
@@ -18,6 +19,7 @@ class ViewController: UIViewController, MenuControllerDelagate {
     public var sideMenu : SideMenuNavigationController?;
     
     private let infoController  = InfoViewController();
+    private let searchViewController = SeachTickerViewController();
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,22 +35,21 @@ class ViewController: UIViewController, MenuControllerDelagate {
 
         addChildController();
         
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 250, height: 50));
-        
-        view.addSubview(button);
-        
-        button.backgroundColor = .systemPurple;
-        button.center = view.center;
-        button.setTitle("Show Tab Bar", for: .normal);
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside);
+        //button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside);
         
     }
     private func addChildController(){
         addChild(infoController)
+        addChild(searchViewController)
         view.addSubview(infoController.view)
         infoController.view.frame = view.bounds
         infoController.didMove(toParent: self);
         infoController.view.isHidden = true;
+        
+        view.addSubview(infoController.view)
+        searchViewController.view.frame = view.bounds
+        searchViewController.didMove(toParent: self);
+        searchViewController.view.isHidden = true;
     }
 
     @IBAction func didTapButton(){
@@ -56,19 +57,27 @@ class ViewController: UIViewController, MenuControllerDelagate {
     }
     
     func didSelectMenuItem(named:SideMenuItem){
+        // when some clicks on a menu item close the menu and set the correspond menu
         sideMenu?.dismiss(animated:true, completion: nil)
+            
+            //set the name of the title to be the View name
             title = named.rawValue
             
+            // iterate through the enum and set the apprioate view
             switch named{
             case .home :
-                view.backgroundColor = .green
                 infoController.view.isHidden = true;
+      
             case .info :
-                view.backgroundColor = .red
                 infoController.view.isHidden = false;
-            case .setting :
-                view.backgroundColor = .orange
+        
+            case .SearchTicker:
                 infoController.view.isHidden = true;
+                searchViewController.view.isHidden = false;
+             
+            case .setting :
+                infoController.view.isHidden = true;
+                self.view.isHidden = true
         
             }
             
