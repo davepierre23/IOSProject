@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zWZ-nB-4Hr">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3oL-g5-5ez">
+            <objects>
+                <tabBarController id="zWZ-nB-4Hr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xsb-7Q-1yO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="coX-of-e8v" kind="relationship" relationship="viewControllers" id="0H9-NB-mhu"/>
+                        <segue destination="hcY-Qj-3mZ" kind="relationship" relationship="viewControllers" id="6GY-tA-5qE"/>
+                        <segue destination="2Lc-J4-bT0" kind="relationship" relationship="viewControllers" id="pU7-Xu-Qne"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BkP-J4-IwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1140" y="1777"/>
+        </scene>
+        <!--Most Active Stocks-->
+        <scene sceneID="83F-o3-PxJ">
+            <objects>
+                <navigationController id="coX-of-e8v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Most Active Stocks" image="chart.bar.fill" catalog="system" id="q7M-2i-ccP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="slp-Ic-jdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jMF-PC-87U" kind="relationship" relationship="rootViewController" id="lEh-8A-OY2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhO-9E-QPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1953" y="2612"/>
+        </scene>
+        <!--Most Active Stock View Controller-->
+        <scene sceneID="de8-b4-kHu">
+            <objects>
+                <viewController id="jMF-PC-87U" customClass="MostActiveStockViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYn-aX-ALp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yhV-o2-e5B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gRR-hV-zY5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcv-gs-w6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1954" y="3417"/>
+        </scene>
+        <!--Search Ticker View Controller-->
+        <scene sceneID="aE6-Im-6M9">
+            <objects>
+                <viewController id="UTg-jR-g6p" customClass="SearchTickerViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCX-vX-QZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDK-ZS-R0v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zmr-xI-bn4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubg-Zj-26X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142" y="3417"/>
+        </scene>
+        <!--Stock Profile-->
+        <scene sceneID="XRv-dG-XPX">
+            <objects>
+                <navigationController id="2Lc-J4-bT0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stock Profile" image="book.circle" catalog="system" id="Qf9-QD-6zq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJK-kf-p6e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x1U-eL-nvd" kind="relationship" relationship="rootViewController" id="7de-Ts-WGg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="2612"/>
+        </scene>
+        <!--Search Stocks-->
+        <scene sceneID="mAy-ov-azO">
+            <objects>
+                <navigationController id="hcY-Qj-3mZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search Stocks" image="magnifyingglass" catalog="system" id="L1F-px-odt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6pI-FK-G9h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UTg-jR-g6p" kind="relationship" relationship="rootViewController" id="yG1-we-TKV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9r-dF-Vdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1141" y="2612"/>
+        </scene>
+        <!--Stock Profile View Controller-->
+        <scene sceneID="D6c-hb-xjq">
+            <objects>
+                <viewController id="x1U-eL-nvd" customClass="StockProfileViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sTZ-9p-HyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LqT-1L-6b4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o4d-Sj-H5H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkd-do-rTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="3417"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.circle" catalog="system" width="32" height="32"/>
+        <image name="chart.bar.fill" catalog="system" width="32" height="32"/>
+        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
