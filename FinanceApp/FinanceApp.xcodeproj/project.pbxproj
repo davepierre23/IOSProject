@@ -20,7 +20,6 @@
 		AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FB26068EA6002A2A72 /* AppDelegate.swift */; };
 		AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D94FD26068EA6002A2A72 /* SceneDelegate.swift */; };
 		AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7D950426068EA8002A2A72 /* Assets.xcassets */; };
-		ADFBCDCB2606F1F1008866C1 /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		AD7D94FD26068EA6002A2A72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD7D950426068EA8002A2A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7D950926068EA8002A2A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +161,6 @@
 		ADFBCDC92606F1D8008866C1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				ADFBCDCA2606F1F1008866C1 /* TickerViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -287,7 +284,6 @@
 				AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */,
 				AD6BE2C5261376540063EFC5 /* StockAPI.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,
-				ADFBCDCB2606F1F1008866C1 /* TickerViewController.swift in Sources */,
 				AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */,
 				AD6BE2CB261378FC0063EFC5 /* StockProfileViewController.swift in Sources */,
 				AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */,

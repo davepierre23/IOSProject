@@ -14,12 +14,13 @@ class StockProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let ticker = "CU.TO"
+        loadStockProfile(ticker:ticker)
     }
     
-
     func loadStockProfile(ticker:String) {
         let stockStore = StockStore()
-        stockStore.fetchStockProfile(ticker: "CU.to" , completion: {
+        stockStore.fetchStockProfile(ticker: ticker , completion: {
             stockProfileResult in
             switch stockProfileResult {
             case let .success(stockProfileResult):
@@ -31,7 +32,7 @@ class StockProfileViewController: UIViewController {
                         switch imageResult {
                         case let .success(image): //self.imageView.image = image
                             OperationQueue.main.addOperation {
-                                self.imageView.image = image
+                                self.imageView?.image = image
                             }
                         case let .failure(error): print("ERROR downloading actual image: \(error)")
                         }
