@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8BD6B16BF084E88AED46B397 /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */; };
+		AD3555C12614A52A00C5BEF6 /* ActiveStockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */; };
+		AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */; };
 		AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */; };
 		AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */; };
 		AD6BE2C1261375EE0063EFC5 /* StockSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */; };
@@ -26,6 +28,8 @@
 		063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ACE90CFA4443551BFD5CB6 /* Pods-FinanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.release.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.release.xcconfig"; sourceTree = "<group>"; };
 		890A5975FF05106922066DE1 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStockTableViewCell.swift; sourceTree = "<group>"; };
+		AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveStockTableViewCell.xib; sourceTree = "<group>"; };
 		AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStock.swift; sourceTree = "<group>"; };
 		AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockProfile.swift; sourceTree = "<group>"; };
 		AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchResult.swift; sourceTree = "<group>"; };
@@ -69,6 +73,22 @@
 				063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD3555B72613E0A700C5BEF6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AD3555BE2614A50300C5BEF6 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */,
+				AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 		AD7D94EF26068EA5002A2A72 = {
@@ -123,6 +143,8 @@
 		ADFBCDC12606E212008866C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD3555BE2614A50300C5BEF6 /* TableCells */,
+				AD3555B72613E0A700C5BEF6 /* Cells */,
 				ADFBCDC32606E2EC008866C1 /* StoryBoards */,
 				AD7D950426068EA8002A2A72 /* Assets.xcassets */,
 			);
@@ -224,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */,
 				AD6BE2CD26137F5D0063EFC5 /* Main.storyboard in Resources */,
 				AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */,
 			);
@@ -284,6 +307,7 @@
 				AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */,
 				AD6BE2C5261376540063EFC5 /* StockAPI.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,
+				AD3555C12614A52A00C5BEF6 /* ActiveStockTableViewCell.swift in Sources */,
 				AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */,
 				AD6BE2CB261378FC0063EFC5 /* StockProfileViewController.swift in Sources */,
 				AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */,

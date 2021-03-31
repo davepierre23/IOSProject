@@ -9,36 +9,43 @@ import UIKit
 
 class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-
-    private let tableView : UITableView = {
-        let tableView = UITableView()
-        tableView.register(UITableViewCell.self,forCellReuseIdentifier: "cell")
-        return tableView
-    }()
+//    private let tableView : UITableView = {
+//        let tableView = UITableView()
+//        tableView.register(ActiveStockTableViewCell.self,forCellReuseIdentifier: ActiveStockTableViewCell.identifier)
+//        return tableView
+//    }()
+    @IBOutlet  var tableView: UITableView!
+    private var model :[ActiveStock] = [ActiveStock]();
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Most Active Stocks"
+        let nib = UINib(nibName: "ActiveStockTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground
-        view.addSubview(tableView)
-        
+        tableView.register(nib, forCellReuseIdentifier: "ActiveStockTableViewCell")
+        tableView.rowHeight = 60;
+        loadMostActiveStocks()
         tableView.delegate = self
         tableView.dataSource = self
 
-        // Do any additional setup after loading the view.
+ 
     }
+
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActiveStockTableViewCell", for: indexPath) as? ActiveStockTableViewCell else { return UITableViewCell()
+            
+        }
+        
+        cell.configure(wtih: model[indexPath.row])
         return cell
     }
 
@@ -49,6 +56,11 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
             switch activeStockResult {
             case let .success(activeStocks):
                 print("Successfully found \(activeStocks.count) Stocks.")
+                OperationQueue.main.addOperation {
+                    self.model = activeStocks
+                    //reload data
+                    self.tableView.reloadData()
+                }
 
             case let .failure(error):
                 print ("Error fetching recent Stocks: \(error)")
