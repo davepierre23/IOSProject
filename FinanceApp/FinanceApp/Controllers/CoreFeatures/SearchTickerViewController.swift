@@ -13,6 +13,7 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
     @IBOutlet  var tableView: UITableView!
     @IBOutlet var exchangePickerView: UIPickerView!
     @IBOutlet var textFiled: UITextField!
+    @IBOutlet var resultsLabel: UITextField!
 
     var searchController :UISearchController!
     var exchangeOption : String = StockAPI.exchangeOptions[0]
@@ -39,6 +40,8 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         textFiled.text = exchangeOption
         createPickerView()
         dismissPickerView()
+        self.updateView(newModel : self.model)
+        resultsLabel.delegate = self
 
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -101,9 +104,7 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
             case let .success(stockSearchResults):
                 print("Successfully found \(stockSearchResults.count) Stocks.")
                 OperationQueue.main.addOperation {
-                    self.model = stockSearchResults
-                    //reload data
-                    self.tableView.reloadData()
+                    self.updateView(newModel: stockSearchResults)
                 }
 
             case let .failure(error):
@@ -111,6 +112,13 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
             }
 
         })
+    }
+    func updateView(newModel : [StockSearchResult]){
+        
+        self.model = newModel
+        resultsLabel.text = "Number of Results \(self.model.count)"
+        self.tableView.reloadData()
+        
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

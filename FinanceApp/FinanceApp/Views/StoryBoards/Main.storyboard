@@ -92,21 +92,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-3x-KHn">
+                                <rect key="frame" x="0.0" y="88" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDK-ZS-R0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Czv-3x-KHn" firstAttribute="top" secondItem="xhC-Ka-k6O" secondAttribute="bottom" constant="24" id="DTm-2N-L9x"/>
                             <constraint firstItem="xhC-Ka-k6O" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="NDk-n7-iZP"/>
+                            <constraint firstItem="Czv-3x-KHn" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="QKL-gz-IIZ"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="xhC-Ka-k6O" secondAttribute="trailing" id="SVb-6J-W5z"/>
                             <constraint firstItem="xhC-Ka-k6O" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" id="TTK-sY-Qpf"/>
+                            <constraint firstItem="Czv-3x-KHn" firstAttribute="top" secondItem="xhC-Ka-k6O" secondAttribute="bottom" constant="10" id="Wqq-4F-zqH"/>
+                            <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="Czv-3x-KHn" secondAttribute="trailing" id="dnL-8U-xEb"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="iHx-zR-Y2d"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" constant="100" id="kz2-o7-Wsf"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="bottom" secondItem="58v-s5-35q" secondAttribute="bottom" id="nVU-zf-MzE"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="58v-s5-35q" secondAttribute="trailing" id="npE-5L-gCC"/>
+                            <constraint firstItem="Czv-3x-KHn" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="yHj-Bb-BgE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zmr-xI-bn4"/>
                     <connections>
+                        <outlet property="resultsLabel" destination="Czv-3x-KHn" id="3Xz-FO-CtG"/>
                         <outlet property="tableView" destination="58v-s5-35q" id="qTY-hQ-PqP"/>
                         <outlet property="textFiled" destination="xhC-Ka-k6O" id="Ve0-Rf-hw0"/>
                     </connections>

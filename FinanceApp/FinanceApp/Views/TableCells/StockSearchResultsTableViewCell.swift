@@ -29,8 +29,6 @@ class StockSearchResultsTableViewCell: UITableViewCell {
         nameLabel.text = "\(model.name) (\(model.symbol))"
         currencyLabel.text = model.currency
         exchangeNameLabel.text = "\(model.stockExchange) (\(model.exchangeShortName))"
-        
-     
 
     }
 
