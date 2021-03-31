@@ -10,6 +10,8 @@
 		8BD6B16BF084E88AED46B397 /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */; };
 		AD3555C12614A52A00C5BEF6 /* ActiveStockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */; };
 		AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */; };
+		AD3555C52614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */; };
+		AD3555C62614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */; };
 		AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */; };
 		AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */; };
 		AD6BE2C1261375EE0063EFC5 /* StockSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */; };
@@ -30,6 +32,8 @@
 		890A5975FF05106922066DE1 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStockTableViewCell.swift; sourceTree = "<group>"; };
 		AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveStockTableViewCell.xib; sourceTree = "<group>"; };
+		AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockSearchResultsTableViewCell.xib; sourceTree = "<group>"; };
 		AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStock.swift; sourceTree = "<group>"; };
 		AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockProfile.swift; sourceTree = "<group>"; };
 		AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchResult.swift; sourceTree = "<group>"; };
@@ -75,18 +79,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AD3555B72613E0A700C5BEF6 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		AD3555BE2614A50300C5BEF6 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
 				AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */,
 				AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */,
+				AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */,
+				AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -144,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				AD3555BE2614A50300C5BEF6 /* TableCells */,
-				AD3555B72613E0A700C5BEF6 /* Cells */,
 				ADFBCDC32606E2EC008866C1 /* StoryBoards */,
 				AD7D950426068EA8002A2A72 /* Assets.xcassets */,
 			);
@@ -249,6 +247,7 @@
 				AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */,
 				AD6BE2CD26137F5D0063EFC5 /* Main.storyboard in Resources */,
 				AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */,
+				AD3555C62614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +303,7 @@
 				AD6BE2C7261378C00063EFC5 /* SearchTickerViewController.swift in Sources */,
 				AD6BE2C32613762A0063EFC5 /* StockStore.swift in Sources */,
 				AD6BE2C9261378D30063EFC5 /* MostActiveStockViewController.swift in Sources */,
+				AD3555C52614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift in Sources */,
 				AD7D94FC26068EA6002A2A72 /* AppDelegate.swift in Sources */,
 				AD6BE2C5261376540063EFC5 /* StockAPI.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,

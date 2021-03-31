@@ -35,9 +35,9 @@ class ActiveStockTableViewCell: UITableViewCell {
             }else{
                 backgroundColor = .red
         }
-  
-   
+
 
     }
+    
     
 }

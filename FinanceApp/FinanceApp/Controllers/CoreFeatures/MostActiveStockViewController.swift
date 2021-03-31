@@ -9,11 +9,6 @@ import UIKit
 
 class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-//    private let tableView : UITableView = {
-//        let tableView = UITableView()
-//        tableView.register(ActiveStockTableViewCell.self,forCellReuseIdentifier: ActiveStockTableViewCell.identifier)
-//        return tableView
-//    }()
     @IBOutlet  var tableView: UITableView!
     private var model :[ActiveStock] = [ActiveStock]();
     override func viewDidLoad() {

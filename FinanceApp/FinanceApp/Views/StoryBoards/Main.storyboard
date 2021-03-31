@@ -82,10 +82,33 @@
                     <view key="view" contentMode="scaleToFill" id="tCX-vX-QZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="58v-s5-35q">
+                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6H-s4-ytl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDK-ZS-R0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k6H-s4-ytl" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="0X8-Yr-qar"/>
+                            <constraint firstItem="k6H-s4-ytl" firstAttribute="top" secondItem="tCX-vX-QZZ" secondAttribute="top" id="Ndm-5g-L7Q"/>
+                            <constraint firstItem="k6H-s4-ytl" firstAttribute="top" secondItem="tCX-vX-QZZ" secondAttribute="top" id="PQW-tK-rWm"/>
+                            <constraint firstAttribute="trailing" secondItem="k6H-s4-ytl" secondAttribute="trailing" id="ehx-cp-Qf9"/>
+                            <constraint firstItem="58v-s5-35q" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="iHx-zR-Y2d"/>
+                            <constraint firstItem="58v-s5-35q" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" constant="100" id="kz2-o7-Wsf"/>
+                            <constraint firstItem="vDK-ZS-R0v" firstAttribute="bottom" secondItem="58v-s5-35q" secondAttribute="bottom" id="nVU-zf-MzE"/>
+                            <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="58v-s5-35q" secondAttribute="trailing" id="npE-5L-gCC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zmr-xI-bn4"/>
+                    <connections>
+                        <outlet property="exchangePickerView" destination="k6H-s4-ytl" id="TH7-Ti-VtT"/>
+                        <outlet property="tableView" destination="58v-s5-35q" id="qTY-hQ-PqP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubg-Zj-26X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,9 +123,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="x1U-eL-nvd" kind="relationship" relationship="rootViewController" id="7de-Ts-WGg"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,22 +144,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9r-dF-Vdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1141" y="2612"/>
-        </scene>
-        <!--Stock Profile View Controller-->
-        <scene sceneID="D6c-hb-xjq">
-            <objects>
-                <viewController id="x1U-eL-nvd" customClass="StockProfileViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sTZ-9p-HyN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="LqT-1L-6b4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="o4d-Sj-H5H"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkd-do-rTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="74" y="3417"/>
         </scene>
     </scenes>
     <resources>
