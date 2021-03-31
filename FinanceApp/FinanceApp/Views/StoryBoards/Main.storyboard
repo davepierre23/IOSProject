@@ -117,9 +117,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zmr-xI-bn4"/>
                     <connections>
+                        <outlet property="exchangeOptionView" destination="xhC-Ka-k6O" id="Zbp-Bt-GGb"/>
                         <outlet property="resultsLabel" destination="Czv-3x-KHn" id="3Xz-FO-CtG"/>
                         <outlet property="tableView" destination="58v-s5-35q" id="qTY-hQ-PqP"/>
-                        <outlet property="textFiled" destination="xhC-Ka-k6O" id="Ve0-Rf-hw0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubg-Zj-26X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,6 +129,7 @@
         <!--Stock Profile-->
         <scene sceneID="XRv-dG-XPX">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="2Lc-J4-bT0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stock Profile" image="book.circle" catalog="system" id="Qf9-QD-6zq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJK-kf-p6e">
@@ -136,7 +137,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="2612"/>
         </scene>

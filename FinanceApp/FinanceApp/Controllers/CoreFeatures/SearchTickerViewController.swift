@@ -12,7 +12,7 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet  var tableView: UITableView!
     @IBOutlet var exchangePickerView: UIPickerView!
-    @IBOutlet var textFiled: UITextField!
+    @IBOutlet var  exchangeOptionView: UITextField!
     @IBOutlet var resultsLabel: UITextField!
 
     var searchController :UISearchController!
@@ -36,10 +36,10 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         tableView.rowHeight = 100;
         tableView.delegate = self
         tableView.dataSource = self
-        textFiled.delegate = self
-        textFiled.text = exchangeOption
-        createPickerView()
-        dismissPickerView()
+        exchangeOptionView.delegate = self
+        exchangeOptionView.text = exchangeOption
+        createExchangeOptionView()
+        closeExchangeOptionHandler()
         self.updateView(newModel : self.model)
         resultsLabel.delegate = self
 
@@ -49,24 +49,9 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
 
       
     }
-    
-    func createPickerView() {
-           let pickerView = UIPickerView()
-           pickerView.delegate = self
-           textFiled.inputView = pickerView
-    }
-    func dismissPickerView() {
-       let toolBar = UIToolbar()
-       toolBar.sizeToFit()
-       let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
-       toolBar.setItems([button], animated: true)
-       toolBar.isUserInteractionEnabled = true
-       textFiled.inputAccessoryView = toolBar
-    }
-    @objc func action() {
-          view.endEditing(true)
-    }
 
+        
+    //used to make the text field componentes not editable
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
@@ -76,11 +61,8 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         guard let query = searchController.searchBar.text else{
             return
         }
-        print(searchController.searchBar.text!)
         searchController.searchBar.text = ""
-        
         let exchange = exchangeOption
-        
         searchStock(query: query, exchange: exchange)
        
     }
@@ -120,6 +102,29 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         self.tableView.reloadData()
         
     }
+    
+    
+    //used for as DropDownComponent to search for a exchange
+    func createExchangeOptionView() {
+           let pickerView = UIPickerView()
+           pickerView.delegate = self
+        exchangeOptionView.inputView = pickerView
+    }
+    //used to close the DropDownCompoent view
+    func closeExchangeOptionHandler() {
+        //create a tool bar to add a button so when we have selected an option we can press the down button
+       let exchangeOptionToolBar = UIToolbar()
+        exchangeOptionToolBar.sizeToFit()
+       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
+        //added the button to the toolbar
+        exchangeOptionToolBar.setItems([doneButton], animated: true)
+        exchangeOptionToolBar.isUserInteractionEnabled = true
+        exchangeOptionView.inputAccessoryView = exchangeOptionToolBar
+    }
+    //used to close the drop down menu when finshed
+    @objc func action() {
+          view.endEditing(true)
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -131,21 +136,14 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         return StockAPI.exchangeOptions[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        print("dialling thing")
-        print(row)
-        print(component)
-    }
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("handling")
-        print(row)
         exchangeOption = StockAPI.exchangeOptions[row]
-        textFiled.text = exchangeOption
+        exchangeOptionView.text = exchangeOption
 
     }
-
+    
+ 
 
 }
                         

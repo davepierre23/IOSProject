@@ -31,9 +31,5 @@ class StockSearchResultsTableViewCell: UITableViewCell {
         exchangeNameLabel.text = "\(model.stockExchange) (\(model.exchangeShortName))"
 
     }
-
-
-
-    
-    
+  
 }
