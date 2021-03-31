@@ -7,11 +7,13 @@
 
 import UIKit
 
-class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource , UISearchBarDelegate{
+class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource ,UITextFieldDelegate, UISearchBarDelegate{
  
     
     @IBOutlet  var tableView: UITableView!
     @IBOutlet var exchangePickerView: UIPickerView!
+    @IBOutlet var textFiled: UITextField!
+
     var searchController :UISearchController!
     var exchangeOption : String = StockAPI.exchangeOptions[0]
 
@@ -33,32 +35,40 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         tableView.rowHeight = 100;
         tableView.delegate = self
         tableView.dataSource = self
-        exchangePickerView.delegate = self
-        
+        textFiled.delegate = self
+        textFiled.text = exchangeOption
+        createPickerView()
+        dismissPickerView()
+
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
 
-        //searchStock(query:"bank", exchange: "NASDAQ")
       
     }
-
- 
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        print("handling")
-        let query = searchBar.text
-        
-        let exchange =  "NASDAQ";
-        
-          if(query?.count == 0){
-              searchActive = false;
-          } else {
-              searchActive = true;
-          }
-         
-        searchStock(query: query!, exchange: exchange)
-      }
+    func createPickerView() {
+           let pickerView = UIPickerView()
+           pickerView.delegate = self
+           textFiled.inputView = pickerView
+    }
+    func dismissPickerView() {
+       let toolBar = UIToolbar()
+       toolBar.sizeToFit()
+       let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
+       toolBar.setItems([button], animated: true)
+       toolBar.isUserInteractionEnabled = true
+       textFiled.inputAccessoryView = toolBar
+    }
+    @objc func action() {
+          view.endEditing(true)
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
         guard let query = searchController.searchBar.text else{
             return
@@ -124,6 +134,8 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         print("handling")
         print(row)
         exchangeOption = StockAPI.exchangeOptions[row]
+        textFiled.text = exchangeOption
+
     }
 
 

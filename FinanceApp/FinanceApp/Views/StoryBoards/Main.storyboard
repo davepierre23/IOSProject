@@ -87,17 +87,18 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="474"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6H-s4-ytl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-Ka-k6O">
+                                <rect key="frame" x="0.0" y="44" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDK-ZS-R0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k6H-s4-ytl" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="0X8-Yr-qar"/>
-                            <constraint firstItem="k6H-s4-ytl" firstAttribute="top" secondItem="tCX-vX-QZZ" secondAttribute="top" id="Ndm-5g-L7Q"/>
-                            <constraint firstItem="k6H-s4-ytl" firstAttribute="top" secondItem="tCX-vX-QZZ" secondAttribute="top" id="PQW-tK-rWm"/>
-                            <constraint firstAttribute="trailing" secondItem="k6H-s4-ytl" secondAttribute="trailing" id="ehx-cp-Qf9"/>
+                            <constraint firstItem="xhC-Ka-k6O" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="NDk-n7-iZP"/>
+                            <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="xhC-Ka-k6O" secondAttribute="trailing" id="SVb-6J-W5z"/>
+                            <constraint firstItem="xhC-Ka-k6O" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" id="TTK-sY-Qpf"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="iHx-zR-Y2d"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" constant="100" id="kz2-o7-Wsf"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="bottom" secondItem="58v-s5-35q" secondAttribute="bottom" id="nVU-zf-MzE"/>
@@ -106,8 +107,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zmr-xI-bn4"/>
                     <connections>
-                        <outlet property="exchangePickerView" destination="k6H-s4-ytl" id="TH7-Ti-VtT"/>
                         <outlet property="tableView" destination="58v-s5-35q" id="qTY-hQ-PqP"/>
+                        <outlet property="textFiled" destination="xhC-Ka-k6O" id="Ve0-Rf-hw0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubg-Zj-26X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

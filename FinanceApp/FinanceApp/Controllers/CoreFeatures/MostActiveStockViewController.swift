@@ -13,7 +13,7 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
     private var model :[ActiveStock] = [ActiveStock]();
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Most Active Stocks"
+        title = "Most Active \(model.count) Stocks"
         let nib = UINib(nibName: "ActiveStockTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground
         tableView.register(nib, forCellReuseIdentifier: "ActiveStockTableViewCell")
@@ -52,9 +52,8 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
             case let .success(activeStocks):
                 print("Successfully found \(activeStocks.count) Stocks.")
                 OperationQueue.main.addOperation {
-                    self.model = activeStocks
-                    //reload data
-                    self.tableView.reloadData()
+                    self.updateView(newModel: activeStocks)
+                  
                 }
 
             case let .failure(error):
@@ -62,6 +61,15 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
         
+    }
+    
+    //update date the view and the elements that depend on it 
+    func updateView(newModel: [ActiveStock]){
+        
+        self.model = newModel
+        self.title = "Most Active \(self.model.count) Stocks"
+        self.tableView.reloadData()
+
     }
 
 }
