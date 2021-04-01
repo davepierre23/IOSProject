@@ -10,9 +10,10 @@ import UIKit
 class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet  var tableView: UITableView!
-    @IBOutlet  var lastUpdatedTimeLabel: UILabel!
+    @IBOutlet  var lastUpdatedTimeLabel: UITextField!
     private var model :[ActiveStock] = [ActiveStock]();
     private var lastUpdatedTime = Date()
+    private var lastUpdatedTimeText: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MostActiveStockViewController")
@@ -28,6 +29,7 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         tableView.delegate = self
         tableView.dataSource = self
         
+    
         // used to handle double tap
         let doubleTapRecognizer =
            UITapGestureRecognizer(target: self,
@@ -35,8 +37,8 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
          doubleTapRecognizer.numberOfTapsRequired = 2
          self.view.addGestureRecognizer(doubleTapRecognizer)
         
-  
- 
+        self.updateTime()
+        
     }
 
     
@@ -56,6 +58,11 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         
         cell.configure(wtih: model[indexPath.row])
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return lastUpdatedTimeText
     }
 
     func loadMostActiveStocks(){
@@ -100,10 +107,11 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
     func updateTime(){
         lastUpdatedTime = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("yyyy-MM-dd HH:mm:s")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MM-dd HH:mm:s")
         let dateText = dateFormatter.string(from: lastUpdatedTime)
         
-        lastUpdatedTimeLabel.text = "Last time updated : \(dateText)"
+        
+      lastUpdatedTimeText = "Last time updated : \(dateText)"
 
     }
     // our double tap handler
