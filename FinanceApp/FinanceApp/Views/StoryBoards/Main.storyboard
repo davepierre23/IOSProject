@@ -101,13 +101,12 @@
                         <viewLayoutGuide key="safeArea" id="vDK-ZS-R0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Czv-3x-KHn" firstAttribute="top" secondItem="xhC-Ka-k6O" secondAttribute="bottom" constant="24" id="DTm-2N-L9x"/>
                             <constraint firstItem="xhC-Ka-k6O" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="NDk-n7-iZP"/>
                             <constraint firstItem="Czv-3x-KHn" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="QKL-gz-IIZ"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="xhC-Ka-k6O" secondAttribute="trailing" id="SVb-6J-W5z"/>
                             <constraint firstItem="xhC-Ka-k6O" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" id="TTK-sY-Qpf"/>
-                            <constraint firstItem="Czv-3x-KHn" firstAttribute="top" secondItem="xhC-Ka-k6O" secondAttribute="bottom" constant="10" id="Wqq-4F-zqH"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="trailing" secondItem="Czv-3x-KHn" secondAttribute="trailing" id="dnL-8U-xEb"/>
+                            <constraint firstItem="Czv-3x-KHn" firstAttribute="top" secondItem="xhC-Ka-k6O" secondAttribute="bottom" constant="10" id="eDG-82-wnz"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="leading" secondItem="vDK-ZS-R0v" secondAttribute="leading" id="iHx-zR-Y2d"/>
                             <constraint firstItem="58v-s5-35q" firstAttribute="top" secondItem="vDK-ZS-R0v" secondAttribute="top" constant="100" id="kz2-o7-Wsf"/>
                             <constraint firstItem="vDK-ZS-R0v" firstAttribute="bottom" secondItem="58v-s5-35q" secondAttribute="bottom" id="nVU-zf-MzE"/>
@@ -129,14 +128,17 @@
         <!--Stock Profile-->
         <scene sceneID="XRv-dG-XPX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="2Lc-J4-bT0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stock Profile" image="book.circle" catalog="system" id="Qf9-QD-6zq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJK-kf-p6e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="Fe7-76-PiW" kind="relationship" relationship="rootViewController" id="giJ-YU-deD"/>
+                    </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpL-21-FsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="2612"/>
         </scene>
@@ -156,6 +158,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9r-dF-Vdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1141" y="2612"/>
+        </scene>
+        <!--Stock Profile View Controller-->
+        <scene sceneID="zg1-ui-Zsd">
+            <objects>
+                <viewController id="Fe7-76-PiW" customClass="StockProfileViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdd-8Z-3LO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4BD-gM-TXt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZxL-Mc-UzM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZxL-Mc-UzM" firstAttribute="trailing" secondItem="4BD-gM-TXt" secondAttribute="trailing" id="2Nn-qR-Ext"/>
+                            <constraint firstItem="ZxL-Mc-UzM" firstAttribute="bottom" secondItem="4BD-gM-TXt" secondAttribute="bottom" id="PHJ-Kj-IVp"/>
+                            <constraint firstItem="4BD-gM-TXt" firstAttribute="leading" secondItem="ZxL-Mc-UzM" secondAttribute="leading" id="XQ9-eL-XbY"/>
+                            <constraint firstItem="4BD-gM-TXt" firstAttribute="top" secondItem="ZxL-Mc-UzM" secondAttribute="top" id="dqT-sf-hZw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BQt-bY-kYl"/>
+                    <connections>
+                        <outlet property="tableView" destination="4BD-gM-TXt" id="9Qq-xQ-b7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh0-Y3-Nzp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="3417"/>
         </scene>
     </scenes>
     <resources>

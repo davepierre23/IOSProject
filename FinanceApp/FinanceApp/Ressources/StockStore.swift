@@ -86,16 +86,12 @@ class StockStore {
         return StockAPI.searchStockProfile(fromJSON: jsonData)
     }
     
-    func fetchImage(for photo: StockProfile, completion: @escaping (ImageResult)->Void){
-        let photoURL = photo.photoURl
+    func fetchImage(for stock: StockProfile, completion: @escaping (ImageResult)->Void){
+        let photoURL = stock.photoURl
         let request = URLRequest(url: photoURL)
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
             let result = self.processImageRequest(data: data, error: error)
-            
-            if case let .success(image) = result {
-                photo.image = image
-            }
             
             completion(result)
 

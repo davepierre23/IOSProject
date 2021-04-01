@@ -55,7 +55,7 @@ class StockProfile {
       let symbol : String;   // used to save the ticker symbol
       let exchange : String
       let country : String;
-     let  companyName : String;   // used to save company name
+      let  companyName : String;   // used to save company name
       let  photoURl : URL; // used to dave the image url
       let sector : String ;
       let industry : String;
@@ -63,7 +63,7 @@ class StockProfile {
       var currentPrice : Double ;
       let beta : Double;
       let dividend : Double;
-     var image: UIImage?
+      var image: UIImage?
 
     
     

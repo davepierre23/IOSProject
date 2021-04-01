@@ -27,8 +27,7 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
+        print("SearchTickerViewController");
         title = "Search Stocks"
         let nib = UINib(nibName: "StockSearchResultsTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground

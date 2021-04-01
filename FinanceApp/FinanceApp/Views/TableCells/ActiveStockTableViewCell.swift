@@ -25,6 +25,7 @@ class ActiveStockTableViewCell: UITableViewCell {
  
     public func configure(wtih model: ActiveStock ){
         //set the labels of the fields
+        //https://www.youtube.com/watch?v=9qIzBGvN04s change label size
         companyNameLabel.text = "\(model.companyName) ($\(model.price))"
         tickerLabel.text = model.ticker
         changesLabel.text = model.changesPercentage

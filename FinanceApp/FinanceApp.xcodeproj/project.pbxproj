@@ -12,6 +12,8 @@
 		AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */; };
 		AD3555C52614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */; };
 		AD3555C62614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */; };
+		AD3555D126151A7200C5BEF6 /* StockProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555CF26151A7200C5BEF6 /* StockProfileTableViewCell.swift */; };
+		AD3555D226151A7200C5BEF6 /* StockProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555D026151A7200C5BEF6 /* StockProfileTableViewCell.xib */; };
 		AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */; };
 		AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */; };
 		AD6BE2C1261375EE0063EFC5 /* StockSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */; };
@@ -34,6 +36,8 @@
 		AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveStockTableViewCell.xib; sourceTree = "<group>"; };
 		AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockSearchResultsTableViewCell.xib; sourceTree = "<group>"; };
+		AD3555CF26151A7200C5BEF6 /* StockProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockProfileTableViewCell.swift; sourceTree = "<group>"; };
+		AD3555D026151A7200C5BEF6 /* StockProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockProfileTableViewCell.xib; sourceTree = "<group>"; };
 		AD6BE2BC261375A40063EFC5 /* ActiveStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStock.swift; sourceTree = "<group>"; };
 		AD6BE2BE261375BF0063EFC5 /* StockProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockProfile.swift; sourceTree = "<group>"; };
 		AD6BE2C0261375EE0063EFC5 /* StockSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchResult.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */,
 				AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */,
 				AD3555C42614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib */,
+				AD3555CF26151A7200C5BEF6 /* StockProfileTableViewCell.swift */,
+				AD3555D026151A7200C5BEF6 /* StockProfileTableViewCell.xib */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */,
+				AD3555D226151A7200C5BEF6 /* StockProfileTableViewCell.xib in Resources */,
 				AD6BE2CD26137F5D0063EFC5 /* Main.storyboard in Resources */,
 				AD7D950526068EA8002A2A72 /* Assets.xcassets in Resources */,
 				AD3555C62614B47300C5BEF6 /* StockSearchResultsTableViewCell.xib in Resources */,
@@ -308,6 +315,7 @@
 				AD6BE2C5261376540063EFC5 /* StockAPI.swift in Sources */,
 				AD7D94FE26068EA6002A2A72 /* SceneDelegate.swift in Sources */,
 				AD3555C12614A52A00C5BEF6 /* ActiveStockTableViewCell.swift in Sources */,
+				AD3555D126151A7200C5BEF6 /* StockProfileTableViewCell.swift in Sources */,
 				AD6BE2BD261375A40063EFC5 /* ActiveStock.swift in Sources */,
 				AD6BE2CB261378FC0063EFC5 /* StockProfileViewController.swift in Sources */,
 				AD6BE2BF261375BF0063EFC5 /* StockProfile.swift in Sources */,
@@ -450,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carleton.2601.FinanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carleton.2601.FinanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -105,6 +105,8 @@ class StockAPI {
     //function used to get the profile of a stock
     // example : https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=40d61e33f3a413f1c52d3cd0fe1c814e
     public static func getStockProfile(ticker : String ) -> URL {
+        //todo remove after
+        return (URLComponents(string: "https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=40d61e33f3a413f1c52d3cd0fe1c814e")?.url!)!
         return convertToURL(
             path: Method.STOCK_PROFILE.rawValue + ticker,
              parameters: [
