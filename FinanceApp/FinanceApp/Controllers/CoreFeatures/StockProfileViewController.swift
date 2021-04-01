@@ -10,6 +10,7 @@ import UIKit
 class StockProfileViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     @IBOutlet  var tableView: UITableView!
     var searchController :UISearchController!
+    var ticker : String = ""
 
     //used to hold the infromation that was found by the request
     private var model :[StockProfile] = [StockProfile]();
@@ -30,10 +31,9 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
         searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
 
-        // Do any additional setup after loading the view.
-        let ticker = "CU.TO"
-        loadStockProfile(ticker:ticker)
-        print("intialStock")
+    
+        print("intialStock ticker :\(ticker)")
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
@@ -70,6 +70,14 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
            
        }
     
+    func showErrorAlert(){
+        let alert = UIAlertController(title: "Notify", message: "There was an error getting Stock Information", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler: { action in
+        } ))
+        present(alert, animated: true)
+    }
+    
+
     func loadStockProfile(ticker:String) {
         self.tableView.reloadData()
 
@@ -99,13 +107,18 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
 
             case let .failure(error):
                 print ("Error fetching recent Stocks: \(error)")
+                OperationQueue.main.addOperation {
+                    self.showErrorAlert()
+                }
+        
             }
             
         })
     
         
     }
- 
+    
+
 
 }
 

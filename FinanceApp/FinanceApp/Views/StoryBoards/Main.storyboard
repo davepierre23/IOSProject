@@ -53,27 +53,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-7h-bR9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="534"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-FE-pxB">
+                                <rect key="frame" x="0.0" y="44" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yhV-o2-e5B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="leading" secondItem="yhV-o2-e5B" secondAttribute="leading" id="4lX-J5-ISG"/>
                             <constraint firstItem="yhV-o2-e5B" firstAttribute="trailing" secondItem="Goz-7h-bR9" secondAttribute="trailing" id="5kn-Em-12w"/>
-                            <constraint firstItem="Goz-7h-bR9" firstAttribute="top" secondItem="yhV-o2-e5B" secondAttribute="top" id="GDO-rs-idn"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="leading" secondItem="yhV-o2-e5B" secondAttribute="leading" id="7xg-7G-oUh"/>
+                            <constraint firstItem="Xhc-FE-pxB" firstAttribute="leading" secondItem="Goz-7h-bR9" secondAttribute="leading" id="HI3-Q4-JPv"/>
+                            <constraint firstItem="Xhc-FE-pxB" firstAttribute="top" secondItem="yhV-o2-e5B" secondAttribute="top" id="JLw-nP-bQr"/>
                             <constraint firstItem="Goz-7h-bR9" firstAttribute="leading" secondItem="yhV-o2-e5B" secondAttribute="leading" id="NDs-aS-oLo"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="trailing" secondItem="yhV-o2-e5B" secondAttribute="trailing" id="Ua9-P3-Hd3"/>
+                            <constraint firstItem="Xhc-FE-pxB" firstAttribute="trailing" secondItem="Goz-7h-bR9" secondAttribute="trailing" id="d4r-IW-tkM"/>
                             <constraint firstItem="yhV-o2-e5B" firstAttribute="bottom" secondItem="Goz-7h-bR9" secondAttribute="bottom" id="ocN-gi-lvZ"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="top" secondItem="yhV-o2-e5B" secondAttribute="top" constant="40" id="rzT-bZ-ejR"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="trailing" secondItem="yhV-o2-e5B" secondAttribute="trailing" id="s0F-0E-DDt"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="bottom" secondItem="yhV-o2-e5B" secondAttribute="bottom" id="smW-UJ-hdZ"/>
+                            <constraint firstItem="Goz-7h-bR9" firstAttribute="bottom" secondItem="yhV-o2-e5B" secondAttribute="bottom" id="zdz-C9-ub5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gRR-hV-zY5"/>
                     <connections>
+                        <outlet property="lastUpdatedTimeLabel" destination="Xhc-FE-pxB" id="BUC-ee-HfV"/>
                         <outlet property="tableView" destination="Goz-7h-bR9" id="OfA-aU-mt4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcv-gs-w6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1954" y="3417"/>
+            <point key="canvasLocation" x="-1954.4000000000001" y="3416.9415292353824"/>
         </scene>
         <!--Search Ticker View Controller-->
         <scene sceneID="aE6-Im-6M9">
@@ -192,9 +208,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book.circle" catalog="system" width="32" height="32"/>
-        <image name="chart.bar.fill" catalog="system" width="32" height="32"/>
-        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

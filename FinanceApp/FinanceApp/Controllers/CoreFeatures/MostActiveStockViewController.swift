@@ -10,11 +10,15 @@ import UIKit
 class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet  var tableView: UITableView!
+    @IBOutlet  var lastUpdatedTimeLabel: UILabel!
     private var model :[ActiveStock] = [ActiveStock]();
+    private var lastUpdatedTime = Date()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MostActiveStockViewController")
 
+        
+        
         title = "Most Active \(model.count) Stocks"
         let nib = UINib(nibName: "ActiveStockTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground
@@ -23,7 +27,15 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         loadMostActiveStocks()
         tableView.delegate = self
         tableView.dataSource = self
-
+        
+        // used to handle double tap
+        let doubleTapRecognizer =
+           UITapGestureRecognizer(target: self,
+                                  action: #selector(MostActiveStockViewController.doubleTap(_:)))
+         doubleTapRecognizer.numberOfTapsRequired = 2
+         self.view.addGestureRecognizer(doubleTapRecognizer)
+        
+  
  
     }
 
@@ -59,18 +71,48 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
                 }
 
             case let .failure(error):
+                OperationQueue.main.addOperation {
+                    self.showErrorAlert()
+                    self.updateTime()
+                }
+
                 print ("Error fetching recent Stocks: \(error)")
             }
         }
         
     }
     
+    func showErrorAlert(){
+        let alert = UIAlertController(title: "Notify", message: "There was an error getting Stock Information", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler: { action in
+        } ))
+        present(alert, animated: true)
+    }
     //update date the view and the elements that depend on it 
     func updateView(newModel: [ActiveStock]){
         self.model = newModel
         self.title = "Most Active \(self.model.count) Stocks"
         self.tableView.reloadData()
+        
+        self.updateTime()
+    }
+    
+    func updateTime(){
+        lastUpdatedTime = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("yyyy-MM-dd HH:mm:s")
+        let dateText = dateFormatter.string(from: lastUpdatedTime)
+        
+        lastUpdatedTimeLabel.text = "Last time updated : \(dateText)"
 
     }
+    // our double tap handler
+    @objc func doubleTap(_ gestureRecognizer: UIGestureRecognizer){
+        print("double tap was pressed")
+        loadMostActiveStocks()
+    }
+
+  
+    
 
 }

@@ -14,7 +14,6 @@ class StockProfileTableViewCell: UITableViewCell {
     @IBOutlet var currencyLabel : UILabel! ;
     @IBOutlet var currentPriceLabel : UILabel! ;
     @IBOutlet var  dividendLabel : UILabel!;
-    @IBOutlet var exchangeNameLabel : UILabel! ;
     @IBOutlet var sectorLabel : UILabel! ;
     @IBOutlet var industryLabel : UILabel! ;
     
@@ -39,7 +38,7 @@ class StockProfileTableViewCell: UITableViewCell {
         currencyLabel.text = "Found in : \(model.country) (\(model.exchange))"
        sectorLabel.text = "Sector: \(model.sector)"
         industryLabel.text = "Industry: \(model.industry)"
-        currentPriceLabel.text = "Price: $\(model.currentPrice) \(model.changeInPrice)"
+        currentPriceLabel.text = "Price: $\(model.currentPrice)"
         dividendLabel.text = "Dividend Pay : \(model.dividend)"
         
     }

@@ -63,8 +63,10 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         searchController.searchBar.text = ""
         let exchange = exchangeOption
         searchStock(query: query, exchange: exchange)
+        
        
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.model.count
     }
@@ -90,6 +92,10 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
 
             case let .failure(error):
                 print ("Error fetching recent Stocks: \(error)")
+                OperationQueue.main.addOperation {
+                    self.showErrorAlert()
+                }
+        
             }
 
         })
@@ -140,6 +146,13 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         exchangeOption = StockAPI.exchangeOptions[row]
         exchangeOptionView.text = exchangeOption
 
+    }
+    
+    func showErrorAlert(){
+        let alert = UIAlertController(title: "Notify", message: "There was an error getting Stock Information", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler: { action in
+        } ))
+        present(alert, animated: true)
     }
     
  
