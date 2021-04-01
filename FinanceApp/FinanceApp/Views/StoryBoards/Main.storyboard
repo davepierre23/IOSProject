@@ -52,7 +52,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="spf-2u-SbR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="spf-2u-SbR">
                                 <rect key="frame" x="0.0" y="118" width="375" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -60,6 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="yhV-o2-e5B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="spf-2u-SbR" firstAttribute="top" secondItem="yhV-o2-e5B" secondAttribute="top" constant="74" id="3lJ-JM-GUR"/>
                             <constraint firstItem="spf-2u-SbR" firstAttribute="leading" secondItem="yhV-o2-e5B" secondAttribute="leading" id="rgw-IU-QBA"/>
                             <constraint firstItem="yhV-o2-e5B" firstAttribute="bottom" secondItem="spf-2u-SbR" secondAttribute="bottom" id="s06-Lk-5HJ"/>
                             <constraint firstItem="yhV-o2-e5B" firstAttribute="trailing" secondItem="spf-2u-SbR" secondAttribute="trailing" id="vHx-PV-n0O"/>

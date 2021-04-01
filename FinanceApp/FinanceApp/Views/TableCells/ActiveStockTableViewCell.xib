@@ -9,21 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveStockTableViewCell" rowHeight="62" id="KGk-i7-Jjw" customClass="ActiveStockTableViewCell" customModule="FinanceApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="371" height="62"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveStockTableViewCell" rowHeight="217" id="KGk-i7-Jjw" customClass="ActiveStockTableViewCell" customModule="FinanceApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="176"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="371" height="62"/>
+                <rect key="frame" x="0.0" y="0.0" width="371" height="176"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtK-i6-pNe">
                         <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-lu-QUL">
-                        <rect key="frame" x="0.0" y="36" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,12 +28,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IRV-Fv-LsW">
+                        <rect key="frame" x="0.0" y="73" width="330" height="68"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="FEv-qE-hwp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3aS-el-mnS"/>
-                    <constraint firstItem="JDa-lu-QUL" firstAttribute="top" secondItem="vtK-i6-pNe" secondAttribute="bottom" constant="15" id="95f-ls-z6B"/>
                     <constraint firstAttribute="trailing" secondItem="FEv-qE-hwp" secondAttribute="trailing" id="C6I-Qi-YsI"/>
-                    <constraint firstItem="JDa-lu-QUL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EY5-oF-MdR"/>
                     <constraint firstItem="vtK-i6-pNe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rW4-3M-j2T"/>
                     <constraint firstItem="vtK-i6-pNe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ttN-Kb-F74"/>
                 </constraints>
@@ -47,10 +46,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="changesLabel" destination="FEv-qE-hwp" id="cnj-zc-sYk"/>
-                <outlet property="companyNameLabel" destination="JDa-lu-QUL" id="NgA-ko-k0h"/>
+                <outlet property="companyNameLabel" destination="IRV-Fv-LsW" id="jKo-DT-e9m"/>
                 <outlet property="tickerLabel" destination="vtK-i6-pNe" id="xyQ-T4-cSg"/>
             </connections>
-            <point key="canvasLocation" x="168.84057971014494" y="50.223214285714285"/>
+            <point key="canvasLocation" x="168.84057971014494" y="88.392857142857139"/>
         </tableViewCell>
     </objects>
 </document>
