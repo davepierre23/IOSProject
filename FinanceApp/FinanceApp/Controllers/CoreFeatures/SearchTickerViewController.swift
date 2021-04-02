@@ -64,7 +64,7 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         let exchange = exchangeOption
         
         //make the request only if the query is greater then 0
-        if (query.count >0){
+        if (query.count > 0){
             searchStock(query: query, exchange: exchange)
 
         }
