@@ -17,8 +17,6 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
         title = "Search Stock Profile"
         let nib = UINib(nibName: "StockProfileTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground
@@ -62,12 +60,10 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
             return cell
        }
        
-      
+     
        func updateView(newModel : [StockProfile]){
-           
            self.model = newModel
            self.tableView.reloadData()
-           
        }
     
     func showErrorAlert(){
@@ -77,10 +73,8 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
         present(alert, animated: true)
     }
     
-
     func loadStockProfile(ticker:String) {
         self.tableView.reloadData()
-
         let stockStore = StockStore()
         stockStore.fetchStockProfile(ticker: ticker , completion: {
             stockProfileResult in
@@ -112,15 +106,11 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
                 }
         
             }
-            
         })
-    
         
     }
-    
-
-
 }
+
 
  
     
