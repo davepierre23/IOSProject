@@ -9,8 +9,7 @@ import UIKit
 
 class StockSearchResultsTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel : UILabel! ;
-    @IBOutlet var currencyLabel : UILabel! ;
-    @IBOutlet var exchangeNameLabel : UILabel! ;
+    @IBOutlet var exchangeNameAndCurrencyLabel : UILabel! ;
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +24,8 @@ class StockSearchResultsTableViewCell: UITableViewCell {
     
     public func configure(wtih model: StockSearchResult ){
         //set the labels of the fields
-        //https://stackoverflow.com/questions/30447034/uilabel-text-not-wrapping
         nameLabel.text = "\(model.name) (\(model.symbol))"
-        currencyLabel.text = model.currency
-        exchangeNameLabel.text = "\(model.stockExchange) (\(model.exchangeShortName))"
+        exchangeNameAndCurrencyLabel.text = "Exchange Found : \(model.stockExchange)\n Currency: \(model.currency)"
 
     }
   

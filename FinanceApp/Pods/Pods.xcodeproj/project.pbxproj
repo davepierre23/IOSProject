@@ -58,7 +58,6 @@
 		4DC7FAD9374B2382278CC8278994270B /* InterimSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1176E1E382C37BD8C880DEC719BBFB07 /* InterimSpace.swift */; };
 		4E88B70410F6837FBD463EA4B6C33155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2DE6C38FDCDDC470143FBC0AADE67 /* Extensions.swift */; };
 		4F169E2D1A934FDE0B138F99A83D6F2D /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E466F5DCDB418BF25AC732B17806345 /* Grid.swift */; };
-		5040D1A7B2AEC12C7CB5E0CC1DE6443F /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6C84A25291EB021071F8DDBC7539D8 /* Motion.framework */; };
 		50FB5CDD5F4090E265761F6B7FA09668 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EFE9AEF8741867610B31981761F49E /* Font.swift */; };
 		511CF280164AA80D3AB8AAC9183045F5 /* MotionCoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95652221F5F45A76C763A906CAC97F32 /* MotionCoordinateSpace.swift */; };
 		5AD573DDBB9465F8B0DA63A81441147B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606E6BF705B5FCB8047CE089C0ECA8B /* TabBar.swift */; };
@@ -72,7 +71,6 @@
 		6452C3B33865AA894740740BFD4D193E /* Pods-FinanceApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F8647A1A36ACC4F413E80B3F47D32 /* Pods-FinanceApp-dummy.m */; };
 		648B813FF2F749165DCE83A9B38EA025 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67FC4DE5C6053A2A436AEC9F0F49EEFD /* Roboto-Light.ttf */; };
 		6695F6A6D6A91AF3F02679866187DFB2 /* Material+MotionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D292FACF1AB33B4F02E4AE1565127 /* Material+MotionAnimation.swift */; };
-		66B35564C1567520A4D4936AE50A5C97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B29B289A096709DE0248E7918564E8 /* Foundation.framework */; };
 		690D86BFB748F927A623DD39EF238DFF /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6187029853CCBE5BDFE444BBF7337E /* CascadePreprocessor.swift */; };
 		6A482FE30FB143545584695D66DBDEE1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5552F2900863BB44A14028EB2BAEC /* Theme.swift */; };
 		6BF02FDECF90FE7C1B8A4C662E60CC99 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034CE173FAA9E76E2CA6B27F4A9F3A9 /* Shape.swift */; };
@@ -83,7 +81,6 @@
 		6F1FA52C689BDE149ECB07B3A3EF0516 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 266EB1D482A1E5621B8B9DA753F12E3A /* Roboto-Bold.ttf */; };
 		703DB204212BCB4D8FA4DD6FF9C430EB /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C12C09A401C595368733F0862EFE /* Bar.swift */; };
 		71C1E33905B7B5D65AB29DD566B75169 /* MotionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6950311B7F8A3EB9EA209BE23C6CF28 /* MotionAnimation.swift */; };
-		73DEB425A708FD1D43961EFE8A4864F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B29B289A096709DE0248E7918564E8 /* Foundation.framework */; };
 		7418EA9EA32A51539C81CE68767F94F2 /* ChipBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A60AAE4DF05BD488B755BB9B094AB6 /* ChipBar.swift */; };
 		76369D0148F9E104AE585FEF16AA480E /* Material+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290362D5B41D2A64C47C8F6208EFF46 /* Material+UIImage.swift */; };
 		765054CD790A1F088EEACDF0D44B1800 /* Pods-FinanceApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C924C8B94D87408B85B171CAEFD746 /* Pods-FinanceApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -163,7 +160,6 @@
 		D6771297583A0616DA5151869C6BCF73 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32144F5EAF4F650175C2E84512E3C00B /* CollectionViewLayout.swift */; };
 		D777716F0B6C0754B7B0230531743BC4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40893D151451E44DAEB90BCBE7F843FB /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D81BAF99243DB866790C57F68895BA73 /* FABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B90B15E3859280B3CA3A7F7325DE8 /* FABMenuController.swift */; };
-		D97E7FA13830D6ED1C4393F7CFF75132 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B29B289A096709DE0248E7918564E8 /* Foundation.framework */; };
 		DBFFED9A3BF2C9D695687BEBECFE0468 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F335C5E41370E7B9CD568F21B16EB53 /* NavigationController.swift */; };
 		DCB26E812A8631BF52EE8F084CE8E9CE /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D962E9ABF2EC14E4B756A797D1610 /* CornerRadius.swift */; };
 		DFEEFD1DCBBE5BC597C89B2AD827074D /* DataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A6667C9C073E663D8F140D8A90D61C /* DataSourceItem.swift */; };
@@ -176,7 +172,6 @@
 		EF435D2A5AC9B1763693CA5284AE5171 /* MotionTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826C51E72FDE817C1D8D2805056C4F4E /* MotionTransition+UINavigationControllerDelegate.swift */; };
 		F1E5C6D412EB9577E7B6044870D662EA /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BF061B08E18D992AD7D927A84DE52F /* CardCollectionViewController.swift */; };
 		F2704366C96AEC88280FA0C000A137D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2415DEC1E8A28645D8D752DC66964ACE /* LayoutConstraint.swift */; };
-		F313925EFA1264F29E31F91EDE5187D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B29B289A096709DE0248E7918564E8 /* Foundation.framework */; };
 		F3E6D05823AF2F2B3315E75A08B783C5 /* MotionTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA26F3321A3F4637930856C708737A8 /* MotionTransition+Interactive.swift */; };
 		F5EFD5EF40E1078BACEAF432DF46A182 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F5C3964F88B2D7FD7C52259908EA38 /* CollectionViewCell.swift */; };
 		F64339E70658C4B356BA8CC2C1AE7968 /* Material+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519A56233D1FDE0593700B694371FA0 /* Material+UIWindow.swift */; };
@@ -292,7 +287,6 @@
 		41271B0482731C8400ACC510A47C62F9 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4200DB5AADC9C5D0657105EF0E8C3CEA /* ConditionalPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConditionalPreprocessor.swift; path = Sources/Preprocessors/ConditionalPreprocessor.swift; sourceTree = "<group>"; };
 		443FA6EAD8AD94038AA34DE1C97850C9 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44B29B289A096709DE0248E7918564E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		45E320A8EFB9ACB2AA56A31DA7A7F5BF /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Pod/Classes/SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		496D325C1B0CA8F909EA1A9B8AA35940 /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Sources/iOS/Text/TextField.swift; sourceTree = "<group>"; };
 		4B02C94D23533524DD00EBD2A01EAB21 /* SideMenuAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuAnimationController.swift; path = Pod/Classes/SideMenuAnimationController.swift; sourceTree = "<group>"; };
@@ -375,7 +369,6 @@
 		BC9DBA6EA12948A242297C59C984BB5B /* Material-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Material-Info.plist"; sourceTree = "<group>"; };
 		BCC5C77AA81892592CF906D12C4FD6CB /* NavigationItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationItem.swift; path = Sources/iOS/Navigation/NavigationItem.swift; sourceTree = "<group>"; };
 		BDB9027971F2D3F311E20048583F1D0E /* SideMenuTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransitionController.swift; path = Pod/Classes/SideMenuTransitionController.swift; sourceTree = "<group>"; };
-		BF6C84A25291EB021071F8DDBC7539D8 /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB1C4CD2A3FF01BD32A7C4741C0FB97 /* LayoutAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAttribute.swift; path = Sources/iOS/Layout/LayoutAttribute.swift; sourceTree = "<group>"; };
 		C0F5C3964F88B2D7FD7C52259908EA38 /* CollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = Sources/iOS/Collection/CollectionViewCell.swift; sourceTree = "<group>"; };
 		C20533DC63B33BDD4CA23540DCB501E3 /* Pods_FinanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -444,7 +437,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B35564C1567520A4D4936AE50A5C97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +451,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97E7FA13830D6ED1C4393F7CFF75132 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +458,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DEB425A708FD1D43961EFE8A4864F9 /* Foundation.framework in Frameworks */,
-				5040D1A7B2AEC12C7CB5E0CC1DE6443F /* Motion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +465,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F313925EFA1264F29E31F91EDE5187D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,14 +526,6 @@
 				539ED0AF68B25DCFCB686B6D3F0D08FF /* Support Files */,
 			);
 			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		2FB1FBB282543AB84E6B805D002C0931 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				44B29B289A096709DE0248E7918564E8 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		4FB40D539BA5319C17DA35882B0AFD21 /* Pods-FinanceApp */ = {
@@ -733,20 +713,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C8BC4170C1EAE0643923982C3208811F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6C84A25291EB021071F8DDBC7539D8 /* Motion.framework */,
-				2FB1FBB282543AB84E6B805D002C0931 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C8BC4170C1EAE0643923982C3208811F /* Frameworks */,
 				DFB638CBFCDCF6189A684AE774457477 /* Pods */,
 				09490EED197AB63852784DF7DD8F7CA8 /* Products */,
 				C5592F78475EB74131489ABF106C435F /* Targets Support Files */,

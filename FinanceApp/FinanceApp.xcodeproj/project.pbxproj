@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BD6B16BF084E88AED46B397 /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */; };
 		AD3555C12614A52A00C5BEF6 /* ActiveStockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */; };
 		AD3555C22614A52A00C5BEF6 /* ActiveStockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3555C02614A52A00C5BEF6 /* ActiveStockTableViewCell.xib */; };
 		AD3555C52614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3555C32614B47300C5BEF6 /* StockSearchResultsTableViewCell.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ACE90CFA4443551BFD5CB6 /* Pods-FinanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.release.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.release.xcconfig"; sourceTree = "<group>"; };
 		890A5975FF05106922066DE1 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3555BF2614A52A00C5BEF6 /* ActiveStockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveStockTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD6B16BF084E88AED46B397 /* Pods_FinanceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,14 +70,6 @@
 				08ACE90CFA4443551BFD5CB6 /* Pods-FinanceApp.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		95E5EFD1F418D71989CAC088 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				063CAE8FFEBA3D417C0F6DF0 /* Pods_FinanceApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AD3555BE2614A50300C5BEF6 /* TableCells */ = {
@@ -102,7 +91,6 @@
 				AD7D94FA26068EA6002A2A72 /* FinanceApp */,
 				AD7D94F926068EA6002A2A72 /* Products */,
 				0C729F28B8D908590EEB64E0 /* Pods */,
-				95E5EFD1F418D71989CAC088 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +117,6 @@
 		ADFBCDBF2606E1E0008866C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ADFBCDC92606F1D8008866C1 /* Other */,
 				ADFBCDC82606F185008866C1 /* CoreFeatures */,
 			);
 			path = Controllers;
@@ -182,13 +169,6 @@
 				AD6BE2CA261378FC0063EFC5 /* StockProfileViewController.swift */,
 			);
 			path = CoreFeatures;
-			sourceTree = "<group>";
-		};
-		ADFBCDC92606F1D8008866C1 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -79,6 +79,9 @@ class SearchTickerViewController:  UIViewController, UITableViewDelegate, UITabl
         cell.configure(wtih: model[indexPath.row])
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(self.view.bounds.height/4.5)
+    }
     
     func searchStock(query:String, exchange: String){
         let stockStore = StockStore()
