@@ -25,7 +25,7 @@ class StockSearchResultsTableViewCell: UITableViewCell {
     public func configure(wtih model: StockSearchResult ){
         //set the labels of the fields
         nameLabel.text = "\(model.name) (\(model.symbol))"
-        exchangeNameAndCurrencyLabel.text = "Exchange Found : \(model.stockExchange)\n Currency: \(model.currency)"
+        exchangeNameAndCurrencyLabel.text = "Exchange Found : \(model.stockExchange)\nCurrency: \(model.currency)"
 
     }
   

@@ -26,7 +26,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Name and Currency " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-zk-j9D">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Name and Currency " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-zk-j9D">
                         <rect key="frame" x="0.0" y="79" width="235" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -34,20 +34,17 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="7Xf-pa-Ggm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0nu-Pd-dXp"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2cI-HZ-GRv"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="top" secondItem="7Xf-pa-Ggm" secondAttribute="bottom" constant="29" id="4GG-Wz-iNP"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="77R-9u-p8V"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bn5-uw-oiT"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Eov-2w-q65"/>
+                    <constraint firstItem="0pd-zk-j9D" firstAttribute="top" secondItem="7Xf-pa-Ggm" secondAttribute="bottom" constant="29" id="JPd-yz-cbJ"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PzX-C1-bc0"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="top" secondItem="7Xf-pa-Ggm" secondAttribute="bottom" constant="29" id="Q6v-QY-fAR"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XNF-3p-Py7"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="geY-W4-esy"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hda-G6-b5h"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jxr-GS-of6"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="top" secondItem="7Xf-pa-Ggm" secondAttribute="bottom" constant="29" id="ofT-by-Jon"/>
+                    <constraint firstItem="0pd-zk-j9D" firstAttribute="leading" secondItem="7Xf-pa-Ggm" secondAttribute="leading" id="kwk-7p-Yxx"/>
                     <constraint firstItem="7Xf-pa-Ggm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rDA-XP-2M9"/>
-                    <constraint firstItem="0pd-zk-j9D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tJT-SF-euy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
