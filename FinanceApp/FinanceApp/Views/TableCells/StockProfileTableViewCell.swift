@@ -34,7 +34,7 @@ class StockProfileTableViewCell: UITableViewCell {
     public func configure(wtih model: StockProfile ){
         //set the labels of the fields
          companyImage?.image = model.image
-        companyNameLabel.text = "Company \(model.companyName)"
+        companyNameLabel.text = "Company: \(model.companyName) (\(model.symbol))"
         currencyLabel.text = "Found in : \(model.country) (\(model.exchange))"
        sectorLabel.text = "Sector: \(model.sector)"
         industryLabel.text = "Industry: \(model.industry)"
