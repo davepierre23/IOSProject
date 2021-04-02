@@ -27,13 +27,11 @@ struct ActiveStock {
     
     //used to popluate the Stock Profile model
     init?(ticker: String, changesPercentage: String, price: String, companyName: String, changes : Double ) {
-  
         self.ticker = ticker
         self.changesPercentage = changesPercentage
         self.price = price
         self.changes = changes
         self.companyName = companyName
-
 
     }
 
