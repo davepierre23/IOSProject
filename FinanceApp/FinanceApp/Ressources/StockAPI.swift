@@ -32,25 +32,27 @@ enum ActiveStockResults {
     case failure(Error)
 }
 
-
+//used for Image UI
 enum ImageResult {
     case success(UIImage)
     case failure(Error)
 }
 
-
+// error if financaial model error
 enum FinancialModelError: Error {
     case invalidJSONData
 }
 
+//used to provide the interface to the API
+//used to get infromation from an API
+//https://financialmodelingprep.com/developer/docs/
 class StockAPI {
-    //used to get infromation from an API
-    //https://financialmodelingprep.com/developer/docs/
     private static let finanaceModelbaseURLString = "https://financialmodelingprep.com"
     private static let financeModelAPIKEY="40d61e33f3a413f1c52d3cd0fe1c814e"
     
     //options found under the Ticker Search
     public static let exchangeOptions = ["ETF", "MUTUAL_FUND", "COMMODITY" ,"INDEX","CRYPTO", "FOREX", "TSX" , "AMEX" , "NASDAQ" , "NYSE" , "EURONEXT", "XETRA","NSE" ,"LSE"]
+    
    //different method that are availble in the API
    enum Method : String {
     case  SYMBOL_SEARCH =  "/api/v3/search"
@@ -59,9 +61,8 @@ class StockAPI {
     case  STOCK_PROFILE =  "/api/v3/profile/"
     }
     
-
+    //used to convert an URL
     private static func convertToURL(path: String?,parameters: [String:String]?) -> URL {
-
       var components = URLComponents(string: finanaceModelbaseURLString)!
       components.path = path ?? ""
       var queryItems = [URLQueryItem]()
@@ -73,9 +74,7 @@ class StockAPI {
          }
          
       }
-
       components.queryItems = queryItems
-
       return components.url!
     }
      
@@ -111,7 +110,7 @@ class StockAPI {
              "apikey": financeModelAPIKEY,
              ])
     }
-    
+    //used to parse a single StockSearchREsults
     private static func stockSearchResult(fromJSON json: [String:Any]) -> StockSearchResult? {
          guard
            let symbol = json["symbol"] as? String,
@@ -124,12 +123,10 @@ class StockAPI {
              //Did not have all the info fields to create a stockSearch Results
              return nil
          }
-         
+    
          return StockSearchResult(symbol: symbol, name: name, currency: currency, stockExchange: stockExchange, exchangeShortName : exchangeShortName )
      }
-    
-
-    
+    //used to parse mutiple stock serch results into an array
     static func stockSearchResults(fromJSON data: Data) -> StockSearchResults {
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
@@ -166,6 +163,7 @@ class StockAPI {
             return .failure(error)
         }
     }
+    //used to parse a single most Active Stock
     private static func mostActiveStock(json: [String:Any]) -> ActiveStock? {
         guard
            let ticker = json["ticker"] as? String,
@@ -181,7 +179,8 @@ class StockAPI {
          
         return ActiveStock(ticker: ticker, changesPercentage: changesPercentage, price: price, companyName: companyName, changes : changes )
      }
-
+    
+    //used to parse mutiple most active stocks
     static func mostActiveStocks(fromJSON data: Data) -> ActiveStockResults {
         
         do {
@@ -212,8 +211,8 @@ class StockAPI {
             return .failure(error)
         }
     }
+    //used to parse a single stock profile
     static func stockProfile(json: [String:Any] )-> StockProfile? {
-        
         guard let symbol = json["symbol"] as? String,
                 let exchange = json["exchangeShortName"] as? String,
               let dividend = json["lastDiv"] as? Double,
@@ -230,12 +229,12 @@ class StockAPI {
             print("Stock profile")
                 return nil
             }
-         
+
         return StockProfile(symbol: symbol, exchange: exchange, country: country,  companyName : companyName, photoURl: url, sector: sector, industry: industry , changeInPrice:changeInPrice, currentPrice: currentPrice,
     beta: beta, dividend: dividend )
 
     }
-    
+    //used to get mutiple stock profile 
     static func searchStockProfile(fromJSON data: Data) -> StockProfileResult {
      
         do {
