@@ -17,15 +17,10 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MostActiveStockViewController")
-
-        
-        
         title = "Most Active \(model.count) Stocks"
         let nib = UINib(nibName: "ActiveStockTableViewCell", bundle: nil )
-        view.backgroundColor = .systemBackground
+        //set up table view
         tableView.register(nib, forCellReuseIdentifier: "ActiveStockTableViewCell")
-        tableView.rowHeight = 60;
-        loadMostActiveStocks()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -37,16 +32,19 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
          doubleTapRecognizer.numberOfTapsRequired = 2
          self.view.addGestureRecognizer(doubleTapRecognizer)
         
-        self.updateTime()
+        //load default data
+        loadMostActiveStocks()
+        
         
     }
 
-    
+    //set the frame for the tableView
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
 
+    //functions used to control the layout for the tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.model.count
     }
@@ -55,7 +53,7 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActiveStockTableViewCell", for: indexPath) as? ActiveStockTableViewCell else { return UITableViewCell()
             
         }
-        
+
         cell.configure(wtih: model[indexPath.row])
         return cell
     }
@@ -64,11 +62,11 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         return CGFloat(self.view.bounds.height/4.5)
     }
     
-    
+    //set the header Section to be the time it last updated
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return lastUpdatedTimeText
     }
-
+    // function that is used to load the most active stock
     func loadMostActiveStocks(){
         let stockStore = StockStore()
         stockStore.fetchMostActiveStocks{
@@ -78,7 +76,6 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
                 print("Successfully found \(activeStocks.count) Stocks.")
                 OperationQueue.main.addOperation {
                     self.updateView(newModel: activeStocks)
-                  
                 }
 
             case let .failure(error):
@@ -92,7 +89,7 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         }
         
     }
-    
+    //used to popup an alert when ever there an Error
     func showErrorAlert(){
         let alert = UIAlertController(title: "Notify", message: "There was an error getting Stock Information", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler: { action in
@@ -107,15 +104,13 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         
         self.updateTime()
     }
-    
+    //used to update the variable that holds the last time the table was updated
     func updateTime(){
         lastUpdatedTime = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("MM-dd HH:mm:s")
         let dateText = dateFormatter.string(from: lastUpdatedTime)
-        
-        
-      lastUpdatedTimeText = "Last time updated : \(dateText)"
+        lastUpdatedTimeText = "Last time updated : \(dateText)"
 
     }
     // our double tap handler
@@ -123,8 +118,5 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         print("double tap was pressed")
         loadMostActiveStocks()
     }
-
-  
-    
 
 }
