@@ -17,7 +17,8 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Search Stock Profile"
+         title = "Search Stock Profile"
+        //build our table view
         let nib = UINib(nibName: "StockProfileTableViewCell", bundle: nil )
         view.backgroundColor = .systemBackground
         tableView.register(nib, forCellReuseIdentifier: "StockProfileTableViewCell")
@@ -25,15 +26,12 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
         tableView.dataSource = self
         self.updateView(newModel : self.model)
 
+        //build the search bar
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
-
-    
-        print("intialStock ticker :\(ticker)")
-        
     }
-    
+    //when the seach bar is clicked handle the seach stock profile
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
      
         guard let ticker = searchBar.text else{
@@ -42,6 +40,7 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
         searchController.searchBar.text = ""
         loadStockProfile(ticker: ticker)
     }
+    // build our table view functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.model.count
     }
@@ -60,19 +59,19 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
             return cell
        }
        
-     
+        //used to update the view
        func updateView(newModel : [StockProfile]){
            self.model = newModel
            self.tableView.reloadData()
        }
-    
+    // bulit a an alert if there an error
     func showErrorAlert(){
         let alert = UIAlertController(title: "Notify", message: "There was an error getting Stock Information", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler: { action in
         } ))
         present(alert, animated: true)
     }
-    
+    //function used to load a sotck profile knowing its ticker
     func loadStockProfile(ticker:String) {
         self.tableView.reloadData()
         let stockStore = StockStore()
@@ -89,7 +88,7 @@ class StockProfileViewController:  UIViewController, UITableViewDelegate, UITabl
                     stockStore.fetchImage(for: stockFirst) {
                     (imageResult) -> Void in
                         switch imageResult {
-                        case let .success(image): //self.imageView.image = image
+                        case let .success(image): 
                             OperationQueue.main.addOperation {
                                 stockFirst.image = image
                                 self.updateView(newModel: stockProfileResult)

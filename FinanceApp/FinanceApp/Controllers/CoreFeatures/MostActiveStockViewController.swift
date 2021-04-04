@@ -34,6 +34,7 @@ class MostActiveStockViewController: UIViewController, UITableViewDelegate, UITa
         
         //load default data
         loadMostActiveStocks()
+        self.updateTime()
         
         
     }
